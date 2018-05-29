@@ -127,7 +127,7 @@ PID gain paramter tuning is the most interesing part of this project. At the end
 
 ## Reflection ##
 
-A few takeawy after completing this project.
+A few takeaway after completing this project.
 
 1. We can see PID controller as a second order system, basically it takes x_c and x_dot_c, x,x_dot as input, and output x_dot_dot. dynamic model can also be used to calculate relevant signals out of x_dot_dot.
 

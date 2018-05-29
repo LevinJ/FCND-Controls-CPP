@@ -127,6 +127,12 @@ PID gain paramter tuning is the most interesing part of this project. At the end
 
 ## Reflection ##
 
+A few takeawy after completing this project.
+
+1. We can see PID controller as a second order system, basically we it takes x_c and x_dot_c, x,x_dot as input, and output x_dot_dot. dynamic model can also be used to calculate relevant signals we cared about by leveraging on x_dot_dot.
+
+2. We can effectively tune PD controller with the help of t_rise and damping ratio. Adopting this approach, we wouild probably want to fine tune t-rise a bit to design a stable controller.
+
 I am kind of lagging behind project submission schedule due to other commitments. In terms of further improving this project, I can think of two items:
 
 1. Explore the trajectory generation portion of this projects (given discrete planning waypoints)

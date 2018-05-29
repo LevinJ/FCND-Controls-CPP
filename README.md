@@ -5,7 +5,7 @@ This project implements a PID controller for a 3D Quadrotor in C++, and fine tun
 
 ## Controller implementation ##
 
-A cascaded PID controller is designed to control the drone. The overall architector the controller is as below,
+A cascaded PID controller is designed to control the drone. The overall architecture of the controller is as below,
 
 ![controller architecture](./imgs/controller_architecture.png)
 
@@ -52,7 +52,7 @@ Its inputs:
 4. the time step of the measurements  
 
 Its output:  
- a collective thrust command in body frame
+1. a collective thrust command in body frame
 
 It is just a regular PID controller, with two additional points,
 
@@ -106,7 +106,7 @@ tau_z = (-F0 + F1 + F2 - F3) * kappa      // This is Yaw
 
 The final controller is able to pass the test in all five scenarios.
 
-Below is a the gifs for scenario 4 and 5.
+Below is the gifs for scenario 4 and 5.
 
 <p align="center">
 <img src="imgs/scenario_4.gif" width="500"/>
@@ -129,7 +129,7 @@ PID gain paramter tuning is the most interesing part of this project. At the end
 
 A few takeawy after completing this project.
 
-1. We can see PID controller as a second order system, basically we it takes x_c and x_dot_c, x,x_dot as input, and output x_dot_dot. dynamic model can also be used to calculate relevant signals we cared about by leveraging on x_dot_dot.
+1. We can see PID controller as a second order system, basically it takes x_c and x_dot_c, x,x_dot as input, and output x_dot_dot. dynamic model can also be used to calculate relevant signals out of x_dot_dot.
 
 2. We can effectively tune PD controller with the help of t_rise and damping ratio. Adopting this approach, we wouild probably want to fine tune t-rise a bit to design a stable controller.
 
